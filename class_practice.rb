@@ -8,10 +8,15 @@ class School
 
   def to_s
     "School object"
+    "Name: #{@name}"
   end
 
 end
 
-obj = School.new("pubg", "ukrine")
+obj1 = School.new("pubg", "ukrine")
+obj2 = School.new("cod", "russia")
+puts obj1
+puts obj2
 
-puts obj.name
+obj1.name=obj2.name
+puts obj1
