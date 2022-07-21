@@ -1,4 +1,7 @@
+require_relative 'my_modules/brypt_password'
+
 class School
+  include BcryptPassword
   attr_accessor :name, :city
 
   def initialize(name, city)
@@ -20,3 +23,7 @@ puts obj2
 
 obj1.name=obj2.name
 puts obj1
+
+hashed = obj1.create_bcrypt_password(obj1.name)
+
+puts hashed

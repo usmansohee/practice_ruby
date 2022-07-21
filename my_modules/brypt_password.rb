@@ -4,7 +4,7 @@ Bundler.require
 
 module BcryptPassword
   puts "BcryptPassword Module Activated"
-  def self.create_bcrypt_password(password)
+  def create_bcrypt_password(password)
     BCrypt::Password.create(password)
   end
 
